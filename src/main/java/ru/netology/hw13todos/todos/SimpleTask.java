@@ -13,7 +13,8 @@ public class SimpleTask extends Task {
 
     @Override
     public boolean matches(String query) {
-        if (title.contains(query)) {
+        this.title = title.toLowerCase();
+        if (title.contains(query.toLowerCase())) {
             return true;
         }
         return false;

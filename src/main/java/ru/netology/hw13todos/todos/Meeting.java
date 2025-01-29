@@ -25,10 +25,12 @@ public class Meeting extends  Task {
 
     @Override
     public boolean matches(String query) {
-        if (topic.contains(query)) {
+        this.topic = topic.toLowerCase();
+        this.project = project.toLowerCase();
+        if (topic.contains(query.toLowerCase())) {
             return true;
         }
-        if (project.contains(query)) {
+        if (project.contains(query.toLowerCase())) {
             return true;
         }
         return false;

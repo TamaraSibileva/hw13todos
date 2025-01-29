@@ -9,7 +9,7 @@ public class TaskTest {
         SimpleTask simpleTask = new SimpleTask(5, "Позвонить родителям");
 
         boolean expected = true;
-        boolean actual = simpleTask.matches("Позвонить");
+        boolean actual = simpleTask.matches("позвонить");
 
         Assertions.assertEquals(expected, actual);
     }
